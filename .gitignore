@@ -1,0 +1,6 @@
+node_modules/
+video-tools/entrada/*
+!video-tools/entrada/.gitkeep
+video-tools/saida/*
+!video-tools/saida/.gitkeep
+video-tools/remotion/out/
