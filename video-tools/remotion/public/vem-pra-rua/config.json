@@ -1,0 +1,43 @@
+{
+  "video": "vem-pra-rua/video.mp4",
+  "captions": "vem-pra-rua/captions.json",
+  "durationSec": 52.1,
+  "overlays": [
+    { "type": "leak", "start": 0, "end": 1.1, "seed": 1 },
+    { "type": "headline", "start": 0.3, "end": 2.8, "lines": [ { "text": "AÇÃO SOCIAL", "at": 0 }, { "text": "VEM PRA RUA", "at": 1.1, "box": true } ] },
+    { "type": "counter", "start": 12.7, "end": 15.9, "prefix": "", "value": 2, "suffix": "", "label": "AÇÕES EM NOVEMBRO" },
+    { "type": "leak", "start": 15.9, "end": 17.0, "seed": 2 },
+    { "type": "leak", "start": 27.9, "end": 29.0, "seed": 3 },
+    { "type": "emoji", "start": 39.3, "end": 41.3, "name": "heart-fire", "pos": "right" },
+    { "type": "leak", "start": 41.6, "end": 42.7, "seed": 4 },
+    { "type": "share", "start": 46.4, "end": 49.9, "friendAt": 0.6 },
+    { "type": "leak", "start": 50.2, "end": 51.3, "seed": 5 },
+    { "type": "title", "start": 50.5, "end": 52.1, "text": "VEM PRA RUA!" }
+  ],
+  "scenes": [
+    {
+      "start": 2.9, "end": 12.3, "motion": "compare",
+      "left": { "title": "ADIADA", "at": 3.2, "items": [ { "text": "dia 25/10", "at": 3.55 }, { "text": "eleições", "at": 6.3 } ] },
+      "right": { "title": "NOVA DATA", "at": 7.4, "items": [ { "text": "2 de novembro", "at": 8.1 }, { "text": "segunda-feira", "at": 10.1 }, { "text": "feriado", "at": 11.0 } ] },
+      "verdict": "ANOTE NA AGENDA", "verdictAt": 11.4
+    },
+    {
+      "start": 17.1, "end": 27.9, "motion": "options",
+      "header": "como ajudar:", "headerIcon": "heart",
+      "items": [
+        { "icon": "utensils", "title": "Alimentos", "sub": "doação", "at": 17.68 },
+        { "icon": "package", "title": "Roupas usadas", "sub": "doação", "at": 19.42 },
+        { "icon": "dollar", "title": "Contribuição", "sub": "para as refeições", "at": 21.3 }
+      ],
+      "footer": "FALA COMIGO", "footerAt": 25.6
+    },
+    {
+      "start": 29.4, "end": 35.9, "layout": "full", "motion": "statement", "icon": "users", "iconAt": 29.7,
+      "lines": [
+        { "text": "participe como", "at": 30.0 },
+        { "text": "voluntário", "at": 31.0, "accent": true },
+        { "text": "é muita gente", "at": 33.4 }
+      ]
+    }
+  ]
+}
