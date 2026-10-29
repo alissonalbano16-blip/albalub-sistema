@@ -33,6 +33,7 @@ export type Overlay = Base &
     | { type: "cta"; line1: string; line2: string }
     | { type: "emoji"; name: string; pos?: EmojiPos; size?: number }
     | { type: "leak"; seed?: number; hue?: number }
+    | { type: "contato"; whatsapp: string; pix?: string; nome?: string }
   );
 
 // Ícone de cada etapa da jornada
@@ -988,7 +989,55 @@ const Headline: React.FC<Extract<Overlay, { type: "headline" }>> = ({ lines, sid
     </AbsoluteFill>
   );
 };
+
+/* ───────────── Contato (WhatsApp / PIX) ───────────── */
+
+// Cartão compacto no topo: ícone + WhatsApp grande, linha do PIX com o nome do titular.
+const Contato: React.FC<Extract<Overlay, { type: "contato" }>> = ({ whatsapp, pix, nome }) => {
+  const { frame, fps } = useT();
+  const saida = useSaida(6);
+  const k = pop(frame, fps, 0, 12);
+  const k2 = pop(frame, fps, 0.35, 12);
+  return (
+    <AbsoluteFill style={{ opacity: saida }}>
+      <Sfx nome="pop" volume={0.35} />
+      <Topo top={150} style={{ transform: `translateY(${(1 - k) * -60}px)`, opacity: k }}>
+        <div
+          style={{
+            background: "linear-gradient(160deg, rgba(38,38,44,0.94), rgba(18,18,22,0.94))",
+            border: `3px solid ${COLORS.accent}`,
+            borderRadius: 34,
+            padding: "26px 44px",
+            boxShadow: `0 20px 50px rgba(0,0,0,0.55), 0 0 40px ${COLORS.accent}44`,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 10,
+            fontFamily,
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+            <Icon name="phone" size={54} color={COLORS.accent} stroke={2.4} />
+            <div style={{ fontSize: 30, fontWeight: 700, color: COLORS.muted, letterSpacing: 2 }}>WHATSAPP</div>
+          </div>
+          <div style={{ fontSize: 76, fontWeight: 900, color: COLORS.accent, letterSpacing: -1, lineHeight: 1 }}>{whatsapp}</div>
+          {pix && (
+            <div style={{ opacity: k2, transform: `scale(${0.9 + 0.1 * k2})`, textAlign: "center", marginTop: 4 }}>
+              <div style={{ fontSize: 34, fontWeight: 800, color: COLORS.text }}>
+                <span style={{ color: COLORS.ink, background: COLORS.accent, borderRadius: 10, padding: "2px 12px", marginRight: 12 }}>PIX</span>
+                {pix}
+              </div>
+              {nome && <div style={{ fontSize: 28, fontWeight: 600, color: COLORS.muted, marginTop: 8 }}>{nome}</div>}
+            </div>
+          )}
+        </div>
+      </Topo>
+    </AbsoluteFill>
+  );
+};
+
 const COMPONENTES: { [K in Overlay["type"]]: React.FC<any> } = {
+  contato: Contato,
   counter: Counter,
   title: Title,
   headline: Headline,

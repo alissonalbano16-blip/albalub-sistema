@@ -20,7 +20,7 @@ Leia SEMPRE antes de planejar:
 - **[references/componentes.md](references/componentes.md)** — catálogo de componentes e props do config.
 - **[references/exemplo-config.json](references/exemplo-config.json)** — exemplo completo de config.
 
-Biblioteca de motions (14): statement, bigNumber, chart, profile, compare, belief, timeline, options, shareNetwork, commentFunnel, reach, offerStack, aiPipeline, editorAuto — todos funcionam em **split** (vídeo embaixo) ou **full** (motion em tela cheia, rosto em bolha). Vitrine: composição `Catalogo` (se o usuário quiser escolher estilos, renderize — ver componentes.md).
+Biblioteca de motions (15): statement, bigNumber, chart, profile, compare, belief, timeline, options, shareNetwork, commentFunnel, reach, offerStack, aiPipeline, editorAuto, contato — todos funcionam em **split** (vídeo embaixo) ou **full** (motion em tela cheia, rosto em bolha). Vitrine: composição `Catalogo` (se o usuário quiser escolher estilos, renderize — ver componentes.md).
 
 ---
 

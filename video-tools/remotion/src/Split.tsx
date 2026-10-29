@@ -6,6 +6,7 @@ import { Chart, type ChartProps } from "./motions/Chart";
 import { Compare, type CompareProps } from "./motions/Compare";
 import { OfferStack, type OfferStackProps } from "./motions/OfferStack";
 import { Statement, type StatementProps } from "./motions/Statement";
+import { Contato, type ContatoProps } from "./motions/Contato";
 import { Timeline, type TimelineProps } from "./motions/Timeline";
 import { CommentFunnel, type CommentFunnelProps } from "./motions/CommentFunnel";
 import { Sfx } from "./motions/kit";
@@ -40,6 +41,7 @@ export type Scene = { start: number; end: number; layout?: Layout } & (
   | ({ motion: "offerStack" } & SemStart<OfferStackProps>)
   | ({ motion: "aiPipeline" } & SemStart<AiPipelineProps>)
   | ({ motion: "editorAuto" } & SemStart<EditorAutoProps>)
+  | ({ motion: "contato" } & SemStart<ContatoProps>)
 );
 
 const MOTIONS: { [K in Scene["motion"]]: React.FC<any> } = {
@@ -57,6 +59,7 @@ const MOTIONS: { [K in Scene["motion"]]: React.FC<any> } = {
   offerStack: OfferStack,
   aiPipeline: AiPipeline,
   editorAuto: EditorAuto,
+  contato: Contato,
 };
 
 type Bloco = { start: number; end: number; full: boolean };

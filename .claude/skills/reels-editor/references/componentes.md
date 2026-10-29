@@ -182,6 +182,18 @@ Para: "ela vai editar", "começa a edição completa", automação trabalhando, 
 ```
 Janela de editor com prévia 9:16 + 4 trilhas (vídeo, legenda, motion, efeitos). O clipe é cortado (whips), blocos de legenda/motion/som vão preenchendo cada trilha, a agulha corre e o % sobe de `cutAt` até `doneAt`, quando bate o carimbo. `title` opcional (padrão "Editor IA"). Deixe ≥ 0.7s entre as fases.
 
+### `contato` — WhatsApp e PIX
+Para: "fala comigo", "me chama no WhatsApp", "doe pelo PIX".
+```json
+{ "start": 25.3, "end": 28.6, "motion": "contato",
+  "whatsapp": "(85) 98179-6430", "whatsAt": 25.6,
+  "pixChave": "(85) 98179-6430", "pixNome": "Nome do titular", "pixAt": 26.5,
+  "selo": "FALA COMIGO", "seloAt": 27.3 }
+```
+Cartão do WhatsApp entra da direita com shockwave → cartão do PIX (chave + nome do titular) entra e fica ativo → carimbo. PIX e selo são opcionais. Confira o número com o usuário (celular = DDD + 9 dígitos).
+
+Versão compacta em rosto cheio: overlay `contato` (`whatsapp`, `pix?`, `nome?`) no topo.
+
 ### Criando um motion novo
 Quando a fala pede algo que nenhum motion acima mostra bem (ex.: comparação de preço, linha do tempo, antes/depois de resultado, calendário, checklist longo):
 1. `src/motions/<Nome>.tsx` exportando `<Nome>Props` (com `start`) e o componente.
@@ -215,6 +227,7 @@ Todos: `{ "type", "start", "end", ... }`.
 | `cta` | `line1`, `line2` | balão de comentário + "COMENTE" + caixa na cor de destaque com a palavra-chave. Último ~8s. |
 | `emoji` | `name`, `pos?` (`left`/`right`/`left-low`/`right-low`), `size?` | emoji animado no canto. **Use pouco.** |
 | `leak` | `seed`, `hue?` | light leak de 1.1s nas viradas. |
+| `contato` | `whatsapp`, `pix?`, `nome?` | cartão compacto no topo com WhatsApp e chave PIX (rosto continua visível). |
 
 Atenção: nos overlays antigos (`reactions`, `share`, `flow`) os tempos internos são **relativos** ao `start` do overlay; nos `scenes` tudo é absoluto.
 
