@@ -1,7 +1,7 @@
 {
   "video": "vem-pra-rua/video.mp4",
   "captions": "vem-pra-rua/captions.json",
-  "durationSec": 52.1,
+  "durationSec": 50.45,
   "overlays": [
     {
       "type": "leak",
@@ -63,20 +63,8 @@
     {
       "type": "share",
       "start": 46.4,
-      "end": 49.9,
+      "end": 50.45,
       "friendAt": 0.6
-    },
-    {
-      "type": "leak",
-      "start": 50.2,
-      "end": 51.3,
-      "seed": 5
-    },
-    {
-      "type": "title",
-      "start": 50.5,
-      "end": 52.1,
-      "text": "VEM PRA RUA!"
     }
   ],
   "scenes": [
