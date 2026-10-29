@@ -39,3 +39,4 @@ configurado: sim (2026-10-28)
 
 ## Aprendizados
 <!-- O que o usuário gostou / não gostou nas edições. A skill adiciona aqui ao receber feedback. -->
+- Projeto VEM PRA RUA (ação social mensal: alimentos, roupas, dinheiro para refeições): usa azul-claro #7DD3FC (soft #A4E0FD, deep #6EBADE, ink #111111) em vez do azul da Albalub. Para re-renderizar, troque o bloco MARCA em src/theme.ts e volte depois. Contato: WhatsApp e PIX (85) 98179-6430, titular Alisson Albano Ribeiro Santos.
