@@ -1,0 +1,110 @@
+{
+  "video": "desconto/video.mp4",
+  "captions": "desconto/captions.json",
+  "durationSec": 19.1,
+  "overlays": [
+    {
+      "type": "leak",
+      "start": 0,
+      "end": 1.1,
+      "seed": 3
+    },
+    {
+      "type": "headline",
+      "start": 2.45,
+      "end": 6.2,
+      "lines": [
+        {
+          "text": "CLIENTE QUER UM",
+          "at": 0
+        },
+        {
+          "text": "DESCONTO",
+          "at": 0.5,
+          "box": true
+        },
+        {
+          "text": "*PEQUENININHO*",
+          "at": 1.4
+        }
+      ]
+    },
+    {
+      "type": "emoji",
+      "start": 4.2,
+      "end": 6.0,
+      "name": "pleading",
+      "pos": "left-low"
+    },
+    {
+      "type": "headline",
+      "start": 6.3,
+      "end": 8.75,
+      "lines": [
+        {
+          "text": "VOU TE PASSAR PRO",
+          "at": 0
+        },
+        {
+          "text": "SETOR DE...",
+          "at": 1.0,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "leak",
+      "start": 8.75,
+      "end": 9.85,
+      "seed": 6
+    },
+    {
+      "type": "placa",
+      "start": 9.65,
+      "end": 12.6,
+      "label": "SETOR DE",
+      "text": "DESCONTO\nPEQUENO"
+    },
+    {
+      "type": "emoji",
+      "start": 13.6,
+      "end": 15.6,
+      "name": "thinking",
+      "pos": "right"
+    },
+    {
+      "type": "leak",
+      "start": 16.5,
+      "end": 17.6,
+      "seed": 8
+    },
+    {
+      "type": "headline",
+      "start": 16.9,
+      "end": 19.1,
+      "lines": [
+        {
+          "text": "NA ALBALUB TEM",
+          "at": 0
+        },
+        {
+          "text": "DESCONTO",
+          "at": 0.35,
+          "box": true
+        },
+        {
+          "text": "DE TODO TAMANHO",
+          "at": 0.8
+        }
+      ]
+    },
+    {
+      "type": "emoji",
+      "start": 17.6,
+      "end": 19.1,
+      "name": "clap",
+      "pos": "left-low"
+    }
+  ],
+  "scenes": []
+}

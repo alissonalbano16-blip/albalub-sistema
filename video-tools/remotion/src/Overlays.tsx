@@ -34,6 +34,7 @@ export type Overlay = Base &
     | { type: "emoji"; name: string; pos?: EmojiPos; size?: number }
     | { type: "leak"; seed?: number; hue?: number }
     | { type: "contato"; whatsapp: string; pix?: string; nome?: string }
+    | { type: "placa"; label?: string; text: string; seta?: boolean }
     | { type: "carta"; foto: string; nome: string; posicao: string; nota: number; atributos: { k: string; v: number }[]; selo?: string; seloAt?: number }
   );
 
@@ -1137,7 +1138,55 @@ const Carta: React.FC<Extract<Overlay, { type: "carta" }>> = ({ foto, nome, posi
   );
 };
 
+/* ───────────── Placa de setor (pendurada, balançando) ───────────── */
+
+// Placa de escritório que cai do teto presa por dois cabos e balança até parar; seta quicando aponta para baixo.
+const Placa: React.FC<Extract<Overlay, { type: "placa" }>> = ({ label = "SETOR", text, seta = true }) => {
+  const { frame, fps, t } = useT();
+  const saida = useSaida(6);
+  const cai = spring({ frame, fps, config: { damping: 9, stiffness: 140 } });
+  const balanco = Math.sin(t * 7) * 9 * Math.exp(-t * 2.2);
+  const quique = Math.abs(Math.sin(t * 6)) * 22;
+  const topo = 170;
+  return (
+    <AbsoluteFill style={{ opacity: saida }}>
+      <Sfx nome="whip" volume={0.4} />
+      <Sfx nome="ding" at={0.35} volume={0.45} />
+      <div style={{ position: "absolute", left: 540, top: 0, transform: `translateY(${(cai - 1) * 600}px) rotate(${balanco}deg)`, transformOrigin: "50% 0" }}>
+        {[-260, 260].map((dx) => (
+          <div key={dx} style={{ position: "absolute", left: dx - 2, top: 0, width: 4, height: topo, background: "linear-gradient(#999, #ddd)" }} />
+        ))}
+        <div
+          style={{
+            position: "absolute",
+            left: -400,
+            top: topo,
+            width: 800,
+            padding: "26px 30px 32px",
+            boxSizing: "border-box",
+            borderRadius: 26,
+            background: "linear-gradient(170deg, #1E4FA8, #0F2C66)",
+            border: "8px solid #F2F2F2",
+            boxShadow: `0 30px 60px rgba(0,0,0,0.55), 0 0 50px ${COLORS.accent}55`,
+            textAlign: "center",
+            fontFamily,
+          }}
+        >
+          <div style={{ display: "inline-block", fontSize: 34, fontWeight: 800, letterSpacing: 6, color: "#0F2C66", background: "#F2F2F2", borderRadius: 999, padding: "4px 26px" }}>{label}</div>
+          <div style={{ marginTop: 14, fontSize: 82, fontWeight: 900, color: "#fff", lineHeight: 1.02, letterSpacing: -1, whiteSpace: "pre-line" }}>{text}</div>
+        </div>
+        {seta && (
+          <div style={{ position: "absolute", left: -55, top: topo + 330 + quique, opacity: interpolate(t, [0.4, 0.6], [0, 1], clamp) }}>
+            <Icon name="arrowRight" size={110} color={COLORS.accent} stroke={3.2} style={{ transform: "rotate(90deg)", filter: `drop-shadow(0 0 18px ${COLORS.accent})` }} />
+          </div>
+        )}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const COMPONENTES: { [K in Overlay["type"]]: React.FC<any> } = {
+  placa: Placa,
   contato: Contato,
   carta: Carta,
   counter: Counter,

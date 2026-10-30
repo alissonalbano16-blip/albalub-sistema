@@ -1,0 +1,443 @@
+[
+ {
+  "text": " E",
+  "startMs": 590,
+  "endMs": 590,
+  "timestampMs": 590,
+  "confidence": 0.22
+ },
+ {
+  "text": " aí",
+  "startMs": 590,
+  "endMs": 1050,
+  "timestampMs": 820,
+  "confidence": 0.706
+ },
+ {
+  "text": " Daniel,",
+  "startMs": 1050,
+  "endMs": 1210,
+  "timestampMs": 1130,
+  "confidence": 0.768
+ },
+ {
+  "text": " o",
+  "startMs": 1290,
+  "endMs": 1330,
+  "timestampMs": 1310,
+  "confidence": 0.572
+ },
+ {
+  "text": " que",
+  "startMs": 1330,
+  "endMs": 1370,
+  "timestampMs": 1350,
+  "confidence": 0.788
+ },
+ {
+  "text": " a",
+  "startMs": 1370,
+  "endMs": 1370,
+  "timestampMs": 1370,
+  "confidence": 0.938
+ },
+ {
+  "text": " gente",
+  "startMs": 1370,
+  "endMs": 1470,
+  "timestampMs": 1420,
+  "confidence": 1
+ },
+ {
+  "text": " acabou",
+  "startMs": 1470,
+  "endMs": 1690,
+  "timestampMs": 1580,
+  "confidence": 0.989
+ },
+ {
+  "text": " de",
+  "startMs": 1690,
+  "endMs": 1770,
+  "timestampMs": 1730,
+  "confidence": 0.988
+ },
+ {
+  "text": " me",
+  "startMs": 1770,
+  "endMs": 1890,
+  "timestampMs": 1830,
+  "confidence": 0.924
+ },
+ {
+  "text": " ligar",
+  "startMs": 1890,
+  "endMs": 2090,
+  "timestampMs": 1990,
+  "confidence": 0.947
+ },
+ {
+  "text": " aqui,",
+  "startMs": 2090,
+  "endMs": 2270,
+  "timestampMs": 2180,
+  "confidence": 0.987
+ },
+ {
+  "text": " mano,",
+  "startMs": 2470,
+  "endMs": 2490,
+  "timestampMs": 2480,
+  "confidence": 0.757
+ },
+ {
+  "text": " pedindo",
+  "startMs": 2630,
+  "endMs": 2790,
+  "timestampMs": 2710,
+  "confidence": 0.704
+ },
+ {
+  "text": " um",
+  "startMs": 2790,
+  "endMs": 2950,
+  "timestampMs": 2870,
+  "confidence": 0.724
+ },
+ {
+  "text": " desconto,",
+  "startMs": 2950,
+  "endMs": 3170,
+  "timestampMs": 3060,
+  "confidence": 0.965
+ },
+ {
+  "text": " tem",
+  "startMs": 3210,
+  "endMs": 3310,
+  "timestampMs": 3260,
+  "confidence": 0.965
+ },
+ {
+  "text": " que",
+  "startMs": 3310,
+  "endMs": 3410,
+  "timestampMs": 3360,
+  "confidence": 0.977
+ },
+ {
+  "text": " ser",
+  "startMs": 3410,
+  "endMs": 3470,
+  "timestampMs": 3440,
+  "confidence": 0.906
+ },
+ {
+  "text": " um",
+  "startMs": 3470,
+  "endMs": 3610,
+  "timestampMs": 3540,
+  "confidence": 0.811
+ },
+ {
+  "text": " desconto",
+  "startMs": 3610,
+  "endMs": 3890,
+  "timestampMs": 3750,
+  "confidence": 0.997
+ },
+ {
+  "text": " pequenininho,",
+  "startMs": 3890,
+  "endMs": 4370,
+  "timestampMs": 4130,
+  "confidence": 0.819
+ },
+ {
+  "text": " mano,",
+  "startMs": 4430,
+  "endMs": 4490,
+  "timestampMs": 4460,
+  "confidence": 0.766
+ },
+ {
+  "text": " um",
+  "startMs": 4590,
+  "endMs": 4630,
+  "timestampMs": 4610,
+  "confidence": 0.594
+ },
+ {
+  "text": " desconto",
+  "startMs": 4630,
+  "endMs": 4770,
+  "timestampMs": 4700,
+  "confidence": 0.994
+ },
+ {
+  "text": " pequeno,",
+  "startMs": 4770,
+  "endMs": 5110,
+  "timestampMs": 4940,
+  "confidence": 0.996
+ },
+ {
+  "text": " ó,",
+  "startMs": 5170,
+  "endMs": 5250,
+  "timestampMs": 5210,
+  "confidence": 0.398
+ },
+ {
+  "text": " como",
+  "startMs": 5350,
+  "endMs": 5450,
+  "timestampMs": 5400,
+  "confidence": 0.947
+ },
+ {
+  "text": " é",
+  "startMs": 5450,
+  "endMs": 5450,
+  "timestampMs": 5450,
+  "confidence": 0.803
+ },
+ {
+  "text": " que",
+  "startMs": 5450,
+  "endMs": 5510,
+  "timestampMs": 5480,
+  "confidence": 0.992
+ },
+ {
+  "text": " a",
+  "startMs": 5510,
+  "endMs": 5510,
+  "timestampMs": 5510,
+  "confidence": 0.997
+ },
+ {
+  "text": " gente",
+  "startMs": 5510,
+  "endMs": 5630,
+  "timestampMs": 5570,
+  "confidence": 0.999
+ },
+ {
+  "text": " faz",
+  "startMs": 5630,
+  "endMs": 5850,
+  "timestampMs": 5740,
+  "confidence": 0.995
+ },
+ {
+  "text": " aí,",
+  "startMs": 5850,
+  "endMs": 5990,
+  "timestampMs": 5920,
+  "confidence": 0.948
+ },
+ {
+  "text": " hein?",
+  "startMs": 5990,
+  "endMs": 6090,
+  "timestampMs": 6040,
+  "confidence": 0.888
+ },
+ {
+  "text": " Vou",
+  "startMs": 6290,
+  "endMs": 6430,
+  "timestampMs": 6360,
+  "confidence": 0.817
+ },
+ {
+  "text": " passar",
+  "startMs": 6430,
+  "endMs": 6690,
+  "timestampMs": 6560,
+  "confidence": 0.996
+ },
+ {
+  "text": " agora,",
+  "startMs": 6690,
+  "endMs": 6910,
+  "timestampMs": 6800,
+  "confidence": 0.993
+ },
+ {
+  "text": " viu?",
+  "startMs": 7010,
+  "endMs": 7030,
+  "timestampMs": 7020,
+  "confidence": 0.535
+ },
+ {
+  "text": " O",
+  "startMs": 7190,
+  "endMs": 7350,
+  "timestampMs": 7270,
+  "confidence": 0.403
+ },
+ {
+  "text": " setor",
+  "startMs": 7350,
+  "endMs": 7610,
+  "timestampMs": 7480,
+  "confidence": 0.992
+ },
+ {
+  "text": " de",
+  "startMs": 7610,
+  "endMs": 7810,
+  "timestampMs": 7710,
+  "confidence": 0.811
+ },
+ {
+  "text": " desconto",
+  "startMs": 7810,
+  "endMs": 8050,
+  "timestampMs": 7930,
+  "confidence": 0.992
+ },
+ {
+  "text": " pequeno.",
+  "startMs": 8050,
+  "endMs": 8550,
+  "timestampMs": 8300,
+  "confidence": 0.991
+ },
+ {
+  "text": " Ah,",
+  "startMs": 8830,
+  "endMs": 8930,
+  "timestampMs": 8880,
+  "confidence": 0.35
+ },
+ {
+  "text": " foi,",
+  "startMs": 8970,
+  "endMs": 9250,
+  "timestampMs": 9000,
+  "confidence": 0.162
+ },
+ {
+  "text": " olha",
+  "startMs": 11110,
+  "endMs": 11170,
+  "timestampMs": 11140,
+  "confidence": 0.756
+ },
+ {
+  "text": " aí,",
+  "startMs": 11170,
+  "endMs": 11250,
+  "timestampMs": 11210,
+  "confidence": 0.366
+ },
+ {
+  "text": " ó.",
+  "startMs": 12450,
+  "endMs": 12450,
+  "timestampMs": 12450,
+  "confidence": 0.959
+ },
+ {
+  "text": " Meu",
+  "startMs": 13050,
+  "endMs": 13170,
+  "timestampMs": 13110,
+  "confidence": 0.285
+ },
+ {
+  "text": " irmão,",
+  "startMs": 13170,
+  "endMs": 13490,
+  "timestampMs": 13330,
+  "confidence": 0.997
+ },
+ {
+  "text": " o",
+  "startMs": 13510,
+  "endMs": 13550,
+  "timestampMs": 13530,
+  "confidence": 0.411
+ },
+ {
+  "text": " Tom",
+  "startMs": 13550,
+  "endMs": 13690,
+  "timestampMs": 13620,
+  "confidence": 0.754
+ },
+ {
+  "text": " me",
+  "startMs": 13690,
+  "endMs": 13830,
+  "timestampMs": 13760,
+  "confidence": 0.058
+ },
+ {
+  "text": " muda",
+  "startMs": 13830,
+  "endMs": 14090,
+  "timestampMs": 13960,
+  "confidence": 0.992
+ },
+ {
+  "text": " de",
+  "startMs": 14090,
+  "endMs": 14310,
+  "timestampMs": 14200,
+  "confidence": 0.994
+ },
+ {
+  "text": " setor,",
+  "startMs": 14310,
+  "endMs": 14650,
+  "timestampMs": 14480,
+  "confidence": 0.999
+ },
+ {
+  "text": " meu",
+  "startMs": 14770,
+  "endMs": 14790,
+  "timestampMs": 14780,
+  "confidence": 0.971
+ },
+ {
+  "text": " irmão,",
+  "startMs": 14790,
+  "endMs": 14950,
+  "timestampMs": 14870,
+  "confidence": 0.999
+ },
+ {
+  "text": " tu",
+  "startMs": 15030,
+  "endMs": 15030,
+  "timestampMs": 15030,
+  "confidence": 0.602
+ },
+ {
+  "text": " ainda",
+  "startMs": 15030,
+  "endMs": 15250,
+  "timestampMs": 15140,
+  "confidence": 0.981
+ },
+ {
+  "text": " continua",
+  "startMs": 15250,
+  "endMs": 15630,
+  "timestampMs": 15440,
+  "confidence": 0.707
+ },
+ {
+  "text": " tirando...",
+  "startMs": 15630,
+  "endMs": 16330,
+  "timestampMs": 15980,
+  "confidence": 0.644
+ }
+]
