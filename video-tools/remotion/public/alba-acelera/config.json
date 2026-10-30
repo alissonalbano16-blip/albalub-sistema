@@ -1,0 +1,194 @@
+{
+  "video": "alba-acelera/video.mp4",
+  "captions": "alba-acelera/captions.json",
+  "durationSec": 21.6,
+  "overlays": [
+    {
+      "type": "leak",
+      "start": 0,
+      "end": 1.1,
+      "seed": 3,
+      "hue": -180
+    },
+    {
+      "type": "headline",
+      "start": 0.2,
+      "end": 2.0,
+      "lines": [
+        {
+          "text": "ALBA",
+          "at": 0.25
+        },
+        {
+          "text": "ACELERA",
+          "at": 0.9,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "headline",
+      "start": 2.05,
+      "end": 3.4,
+      "lines": [
+        {
+          "text": "VAI DAR",
+          "at": 0
+        },
+        {
+          "text": "O QUE FALAR",
+          "at": 0.5,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "leak",
+      "start": 6.6,
+      "end": 7.7,
+      "seed": 5
+    },
+    {
+      "type": "headline",
+      "start": 6.75,
+      "end": 9.4,
+      "lines": [
+        {
+          "text": "PEQUENAS",
+          "at": 0
+        },
+        {
+          "text": "OFICINAS",
+          "at": 0.25,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "leak",
+      "start": 14.0,
+      "end": 15.1,
+      "seed": 7
+    },
+    {
+      "type": "headline",
+      "start": 14.3,
+      "end": 19.2,
+      "lines": [
+        {
+          "text": "SIGA O PERFIL",
+          "at": 0.5
+        },
+        {
+          "text": "ACOMPANHE",
+          "at": 1.7
+        },
+        {
+          "text": "OS CONTEÚDOS",
+          "at": 2.6,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "emoji",
+      "start": 15.2,
+      "end": 17.2,
+      "name": "point-down",
+      "pos": "right"
+    },
+    {
+      "type": "leak",
+      "start": 19.1,
+      "end": 20.2,
+      "seed": 2
+    },
+    {
+      "type": "headline",
+      "start": 19.35,
+      "end": 21.6,
+      "lines": [
+        {
+          "text": "VEM COM A GENTE",
+          "at": 0.1
+        },
+        {
+          "text": "ALBA ACELERA",
+          "at": 0.85,
+          "box": true
+        }
+      ],
+      "pulseAt": 1.3
+    },
+    {
+      "type": "emoji",
+      "start": 20.3,
+      "end": 21.6,
+      "name": "rocket",
+      "pos": "right"
+    }
+  ],
+  "scenes": [
+    {
+      "start": 3.5,
+      "end": 6.5,
+      "layout": "full",
+      "motion": "chart",
+      "title": "faturamento",
+      "points": [
+        8000,
+        9500,
+        9000,
+        15000,
+        26000,
+        48000
+      ],
+      "xLabels": [
+        "jan",
+        "fev",
+        "mar",
+        "abr",
+        "mai",
+        "jun"
+      ],
+      "drawAt": 3.9,
+      "drawEnd": 5.3,
+      "label": "ACELERADO",
+      "prefix": "R$ ",
+      "compacto": true
+    },
+    {
+      "start": 9.5,
+      "end": 14.1,
+      "motion": "options",
+      "header": "problemas de:",
+      "headerIcon": "alert",
+      "items": [
+        {
+          "icon": "users",
+          "title": "Gestão de pessoas",
+          "sub": "equipe e liderança",
+          "at": 10.5
+        },
+        {
+          "icon": "zap",
+          "title": "Operação",
+          "sub": "processos da oficina",
+          "at": 11.5
+        },
+        {
+          "icon": "dollar",
+          "title": "Finanças",
+          "sub": "caixa e lucro",
+          "at": 12.9
+        },
+        {
+          "icon": "trendingUp",
+          "title": "Comercial",
+          "sub": "vendas e clientes",
+          "at": 13.4
+        }
+      ]
+    }
+  ]
+}
