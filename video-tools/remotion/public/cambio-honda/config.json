@@ -1,7 +1,7 @@
 {
   "video": "cambio-honda/video.mp4",
   "captions": "cambio-honda/captions.json",
-  "durationSec": 40.62,
+  "durationSec": 37.41,
   "overlays": [
     {
       "type": "headline",
@@ -17,8 +17,7 @@
           "at": 1.28,
           "box": true
         }
-      ],
-      "pulseAt": 1.6800000000000002
+      ]
     },
     {
       "type": "headline",
@@ -89,7 +88,7 @@
     {
       "type": "headline",
       "start": 33.65,
-      "end": 38.25,
+      "end": 35.2,
       "lines": [
         {
           "text": "AGENDE SEU TESTE",
@@ -97,21 +96,21 @@
         },
         {
           "text": "GRÁTIS",
-          "at": 3.0,
+          "at": 0.9,
           "box": true
         }
       ]
     },
     {
       "type": "title",
-      "start": 38.45,
-      "end": 40.62,
+      "start": 35.3,
+      "end": 37.42,
       "text": "CHAMA NA ALBA"
     },
     {
       "type": "emoji",
-      "start": 38.85,
-      "end": 40.62,
+      "start": 35.65,
+      "end": 37.42,
       "name": "point-down",
       "pos": "left-low"
     }
