@@ -34,6 +34,7 @@ export type Overlay = Base &
     | { type: "emoji"; name: string; pos?: EmojiPos; size?: number }
     | { type: "leak"; seed?: number; hue?: number }
     | { type: "contato"; whatsapp: string; pix?: string; nome?: string }
+    | { type: "regua"; de: string; para: string; desceAt: number; selo?: string; seloAt?: number }
     | { type: "placa"; label?: string; text: string; seta?: boolean }
     | { type: "carta"; foto: string; nome: string; posicao: string; nota: number; atributos: { k: string; v: number }[]; selo?: string; seloAt?: number }
   );
@@ -1185,7 +1186,56 @@ const Placa: React.FC<Extract<Overlay, { type: "placa" }>> = ({ label = "SETOR",
   );
 };
 
+/* ───────────── Régua de altura (antes → depois) ───────────── */
+
+// Régua vertical na lateral esquerda; o marcador começa em `de` e despenca até `para` em `desceAt`
+// (tempos relativos ao start), com tremida e carimbo opcional.
+const Regua: React.FC<Extract<Overlay, { type: "regua" }>> = ({ de, para, desceAt, selo, seloAt }) => {
+  const { frame, fps, t } = useT();
+  const saida = useSaida(6);
+  const entra = spring({ frame, fps, config: { damping: 14, stiffness: 160 } });
+  const TOPO = 300;
+  const ALT = 900;
+  const desce = interpolate(t, [desceAt, desceAt + 0.35], [0, 1], { ...clamp, easing: Easing.in(Easing.cubic) });
+  const quica = spring({ frame: frame - Math.round((desceAt + 0.35) * fps), fps, config: { damping: 7, stiffness: 260 } });
+  const y = TOPO + ALT * 0.5 * desce + (desce >= 1 ? (1 - quica) * -18 : 0);
+  const tremor = t > desceAt + 0.35 && t < desceAt + 0.7 ? Math.sin(t * 90) * 6 : 0;
+  const k = seloAt === undefined ? 0 : interpolate(t, [seloAt, seloAt + 0.18], [0, 1], { ...clamp, easing: Easing.out(Easing.back(2)) });
+  const label = desce < 0.5 ? de : para;
+  return (
+    <AbsoluteFill style={{ opacity: saida, transform: `translateX(${(1 - entra) * -260 + tremor}px)` }}>
+      <Sfx nome="pop" volume={0.3} />
+      <Sfx nome="whip" at={desceAt} volume={0.45} />
+      <Sfx nome="glass" at={desceAt + 0.35} volume={0.35} />
+      {selo && seloAt !== undefined && <Sfx nome="ding" at={seloAt} volume={0.4} />}
+      {/* fita métrica */}
+      <div style={{ position: "absolute", left: 60, top: TOPO - 30, width: 90, height: ALT + 60, borderRadius: 14, background: "linear-gradient(90deg, #F7D54A, #E8B923)", boxShadow: "0 18px 40px rgba(0,0,0,0.5)", border: "3px solid #1a1a1a", overflow: "hidden" }}>
+        {Array.from({ length: 35 }).map((_, i) => (
+          <div key={i} style={{ position: "absolute", left: 0, top: 30 + i * (ALT / 34), width: i % 5 === 0 ? 50 : 26, height: 4, background: "#1a1a1a" }} />
+        ))}
+      </div>
+      {/* marcador */}
+      <div style={{ position: "absolute", left: 150, top: y - 46, display: "flex", alignItems: "center" }}>
+        <div style={{ width: 0, height: 0, borderTop: "26px solid transparent", borderBottom: "26px solid transparent", borderRight: `30px solid ${COLORS.accent}` }} />
+        <div style={{ fontFamily, fontWeight: 900, fontSize: 64, color: "#fff", background: COLORS.accent, padding: "6px 22px", borderRadius: 16, boxShadow: `0 0 30px ${COLORS.accent}88`, whiteSpace: "nowrap" }}>{label}</div>
+      </div>
+      {/* altura antiga riscada */}
+      {desce >= 1 && (
+        <div style={{ position: "absolute", left: 180, top: TOPO - 40, fontFamily, fontWeight: 900, fontSize: 50, color: "rgba(255,255,255,0.85)", ...textOutline(6) }}>
+          <span style={{ textDecoration: "line-through", textDecorationColor: "#FF3B30", textDecorationThickness: 8 }}>{de}</span>
+        </div>
+      )}
+      {selo && k > 0 && (
+        <div style={{ position: "absolute", left: 200, top: TOPO + ALT * 0.5 + 90, transform: `rotate(-10deg) scale(${2.3 - 1.3 * k})`, opacity: Math.min(1, k * 1.5), fontFamily, fontWeight: 900, fontSize: 96, color: "#FF3B30", border: "8px solid #FF3B30", borderRadius: 20, padding: "4px 26px", background: "rgba(0,0,0,0.55)" }}>
+          {selo}
+        </div>
+      )}
+    </AbsoluteFill>
+  );
+};
+
 const COMPONENTES: { [K in Overlay["type"]]: React.FC<any> } = {
+  regua: Regua,
   placa: Placa,
   contato: Contato,
   carta: Carta,

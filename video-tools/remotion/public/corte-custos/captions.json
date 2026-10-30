@@ -1,0 +1,317 @@
+[
+ {
+  "text": " Pessoal,",
+  "startMs": 140,
+  "endMs": 460,
+  "timestampMs": 300,
+  "confidence": 0.704
+ },
+ {
+  "text": " o",
+  "startMs": 600,
+  "endMs": 600,
+  "timestampMs": 600,
+  "confidence": 0.656
+ },
+ {
+  "text": " nosso",
+  "startMs": 600,
+  "endMs": 720,
+  "timestampMs": 660,
+  "confidence": 0.971
+ },
+ {
+  "text": " gerente",
+  "startMs": 720,
+  "endMs": 1100,
+  "timestampMs": 910,
+  "confidence": 0.399
+ },
+ {
+  "text": " doidou,",
+  "startMs": 1480,
+  "endMs": 2220,
+  "timestampMs": 1850,
+  "confidence": 0.498
+ },
+ {
+  "text": " reduzindo",
+  "startMs": 2440,
+  "endMs": 2940,
+  "timestampMs": 2690,
+  "confidence": 0.729
+ },
+ {
+  "text": " o",
+  "startMs": 2940,
+  "endMs": 3080,
+  "timestampMs": 3010,
+  "confidence": 0.91
+ },
+ {
+  "text": " custo,",
+  "startMs": 3080,
+  "endMs": 3360,
+  "timestampMs": 3220,
+  "confidence": 0.978
+ },
+ {
+  "text": " o",
+  "startMs": 3420,
+  "endMs": 3420,
+  "timestampMs": 3420,
+  "confidence": 0.298
+ },
+ {
+  "text": " quanto",
+  "startMs": 3420,
+  "endMs": 3620,
+  "timestampMs": 3520,
+  "confidence": 0.763
+ },
+ {
+  "text": " tu",
+  "startMs": 3620,
+  "endMs": 3780,
+  "timestampMs": 3700,
+  "confidence": 0.584
+ },
+ {
+  "text": " faz",
+  "startMs": 3780,
+  "endMs": 3880,
+  "timestampMs": 3830,
+  "confidence": 0.236
+ },
+ {
+  "text": " nele",
+  "startMs": 3880,
+  "endMs": 3980,
+  "timestampMs": 3930,
+  "confidence": 0.416
+ },
+ {
+  "text": " pra",
+  "startMs": 3980,
+  "endMs": 4100,
+  "timestampMs": 4040,
+  "confidence": 0.507
+ },
+ {
+  "text": " reduzir",
+  "startMs": 4100,
+  "endMs": 4460,
+  "timestampMs": 4280,
+  "confidence": 0.996
+ },
+ {
+  "text": " o",
+  "startMs": 4460,
+  "endMs": 4500,
+  "timestampMs": 4480,
+  "confidence": 0.541
+ },
+ {
+  "text": " custo?",
+  "startMs": 4500,
+  "endMs": 4740,
+  "timestampMs": 4620,
+  "confidence": 0.997
+ },
+ {
+  "text": " Cortando",
+  "startMs": 4900,
+  "endMs": 5140,
+  "timestampMs": 5020,
+  "confidence": 0.788
+ },
+ {
+  "text": " tudo",
+  "startMs": 5140,
+  "endMs": 5360,
+  "timestampMs": 5250,
+  "confidence": 0.993
+ },
+ {
+  "text": " pela",
+  "startMs": 5360,
+  "endMs": 5540,
+  "timestampMs": 5450,
+  "confidence": 0.984
+ },
+ {
+  "text": " metade.",
+  "startMs": 5540,
+  "endMs": 6140,
+  "timestampMs": 5840,
+  "confidence": 0.996
+ },
+ {
+  "text": " começando",
+  "startMs": 6290,
+  "endMs": 6590,
+  "timestampMs": 6440,
+  "confidence": 0.983
+ },
+ {
+  "text": " pelo",
+  "startMs": 6590,
+  "endMs": 6770,
+  "timestampMs": 6680,
+  "confidence": 0.741
+ },
+ {
+  "text": " nosso",
+  "startMs": 6770,
+  "endMs": 7010,
+  "timestampMs": 6890,
+  "confidence": 0.629
+ },
+ {
+  "text": " staff,",
+  "startMs": 7010,
+  "endMs": 7290,
+  "timestampMs": 7150,
+  "confidence": 0.451
+ },
+ {
+  "text": " porque",
+  "startMs": 7370,
+  "endMs": 7450,
+  "timestampMs": 7410,
+  "confidence": 0.605
+ },
+ {
+  "text": " esse",
+  "startMs": 7450,
+  "endMs": 7590,
+  "timestampMs": 7520,
+  "confidence": 0.972
+ },
+ {
+  "text": " menino",
+  "startMs": 7590,
+  "endMs": 7770,
+  "timestampMs": 7680,
+  "confidence": 0.749
+ },
+ {
+  "text": " aqui,",
+  "startMs": 7770,
+  "endMs": 8100,
+  "timestampMs": 8150,
+  "confidence": 0.979
+ },
+ {
+  "text": " ele",
+  "startMs": 8180,
+  "endMs": 8340,
+  "timestampMs": 8260,
+  "confidence": 0.618
+ },
+ {
+  "text": " tinha",
+  "startMs": 8340,
+  "endMs": 8500,
+  "timestampMs": 8420,
+  "confidence": 0.995
+ },
+ {
+  "text": " uns",
+  "startMs": 8500,
+  "endMs": 8660,
+  "timestampMs": 8580,
+  "confidence": 0.938
+ },
+ {
+  "text": " 1,70",
+  "startMs": 8660,
+  "endMs": 8860,
+  "timestampMs": 8760,
+  "confidence": 0.981
+ },
+ {
+  "text": " agora",
+  "startMs": 8860,
+  "endMs": 9060,
+  "timestampMs": 8960,
+  "confidence": 0.605
+ },
+ {
+  "text": " só",
+  "startMs": 9060,
+  "endMs": 9240,
+  "timestampMs": 9150,
+  "confidence": 0.837
+ },
+ {
+  "text": " tem",
+  "startMs": 9240,
+  "endMs": 9320,
+  "timestampMs": 9280,
+  "confidence": 0.713
+ },
+ {
+  "text": " 85",
+  "startMs": 9320,
+  "endMs": 9800,
+  "timestampMs": 9560,
+  "confidence": 0.941
+ },
+ {
+  "text": " cm,",
+  "startMs": 9800,
+  "endMs": 10260,
+  "timestampMs": 10030,
+  "confidence": 0.342
+ },
+ {
+  "text": " ó!",
+  "startMs": 10260,
+  "endMs": 10660,
+  "timestampMs": 10460,
+  "confidence": 0.297
+ },
+ {
+  "text": " cortou",
+  "startMs": 10900,
+  "endMs": 11120,
+  "timestampMs": 11010,
+  "confidence": 0.987
+ },
+ {
+  "text": " pela",
+  "startMs": 11120,
+  "endMs": 11280,
+  "timestampMs": 11200,
+  "confidence": 0.974
+ },
+ {
+  "text": " metade",
+  "startMs": 11280,
+  "endMs": 11620,
+  "timestampMs": 11450,
+  "confidence": 0.998
+ },
+ {
+  "text": " nossos",
+  "startMs": 11620,
+  "endMs": 11840,
+  "timestampMs": 11730,
+  "confidence": 0.258
+ },
+ {
+  "text": " custos",
+  "startMs": 11840,
+  "endMs": 12160,
+  "timestampMs": 12000,
+  "confidence": 0.924
+ },
+ {
+  "text": " galera.",
+  "startMs": 12160,
+  "endMs": 12420,
+  "timestampMs": 12290,
+  "confidence": 0.823
+ }
+]
