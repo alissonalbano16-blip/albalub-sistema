@@ -5,3 +5,4 @@ video-tools/saida/*
 !video-tools/saida/.gitkeep
 video-tools/remotion/out/
 video-tools/remotion/public/*/video.mp4
+video-tools/modelos/*.tflite
