@@ -7,8 +7,7 @@
       "type": "leak",
       "start": 0,
       "end": 1.1,
-      "seed": 3,
-      "hue": -180
+      "seed": 3
     },
     {
       "type": "headline",
