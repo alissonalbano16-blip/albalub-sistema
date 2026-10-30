@@ -1,0 +1,17 @@
+{
+  "video": "reforco/video.mp4",
+  "captions": "reforco/captions.json",
+  "durationSec": 15.0,
+  "overlays": [
+    { "type": "leak", "start": 0, "end": 1.1, "seed": 2 },
+    { "type": "headline", "start": 0.3, "end": 3.1, "lines": [ { "text": "PLANTÃO", "at": 0 }, { "text": "DO MERCADO", "at": 0.35, "box": true } ] },
+    { "type": "headline", "start": 3.2, "end": 6.2, "lines": [ { "text": "OFICIAL!", "at": 0 }, { "text": "NOVO REFORÇO", "at": 0.45, "box": true }, { "text": "DA ALBALUB", "at": 0.9 } ] },
+    { "type": "leak", "start": 6.1, "end": 7.2, "seed": 5 },
+    { "type": "title", "start": 6.4, "end": 9.2, "text": "CHEGOU NO TIME!" },
+    { "type": "emoji", "start": 6.8, "end": 9.0, "name": "clap", "pos": "right" },
+    { "type": "carta", "start": 9.6, "end": 15.0, "foto": "reforco/foto.png", "nome": "NOVO CRAQUE", "posicao": "ALB", "nota": 99,
+      "atributos": [ { "k": "CARISMA", "v": 99 }, { "k": "RESENHA", "v": 99 }, { "k": "SIMPATIA", "v": 98 }, { "k": "ESTILO", "v": 97 }, { "k": "ATENDIMENTO", "v": 96 }, { "k": "TROCA DE ÓLEO", "v": 95 } ],
+      "selo": "CONTRATADO!", "seloAt": 2.9 }
+  ],
+  "scenes": []
+}

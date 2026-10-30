@@ -1,4 +1,4 @@
-import { AbsoluteFill, Easing, interpolate, Sequence, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Easing, Img, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { LightLeak } from "@remotion/light-leaks";
 import { Emoji, type EmojiPos } from "./Emoji";
 import { Cadeado, Icon, type IconName } from "./Icons";
@@ -34,6 +34,7 @@ export type Overlay = Base &
     | { type: "emoji"; name: string; pos?: EmojiPos; size?: number }
     | { type: "leak"; seed?: number; hue?: number }
     | { type: "contato"; whatsapp: string; pix?: string; nome?: string }
+    | { type: "carta"; foto: string; nome: string; posicao: string; nota: number; atributos: { k: string; v: number }[]; selo?: string; seloAt?: number }
   );
 
 // Ícone de cada etapa da jornada
@@ -1036,8 +1037,109 @@ const Contato: React.FC<Extract<Overlay, { type: "contato" }>> = ({ whatsapp, pi
   );
 };
 
+/* ───────────── Carta de jogador (paródia de anúncio de reforço) ───────────── */
+
+// Fundo escurece, carta dourada/azul gira para a frente com brilho passando,
+// atributos sobem um a um e o carimbo bate. Tempos relativos ao start do overlay.
+const Carta: React.FC<Extract<Overlay, { type: "carta" }>> = ({ foto, nome, posicao, nota, atributos, selo, seloAt = 2.6 }) => {
+  const { frame, fps, t } = useT();
+  const saida = useSaida(6);
+  const entra = spring({ frame: frame - 6, fps, config: { damping: 13, stiffness: 120 } });
+  const flash = interpolate(t, [0, 0.08, 0.35], [0, 1, 0], clamp);
+  const brilho = interpolate(t, [0.7, 1.4], [-40, 140], clamp);
+  const carimbo = interpolate(t, [seloAt, seloAt + 0.18], [0, 1], { ...clamp, easing: Easing.out(Easing.back(2)) });
+  const ouro = "#F4D27A";
+  const W = 640;
+  return (
+    <AbsoluteFill style={{ opacity: saida }}>
+      <Sfx nome="whoosh" at={0.15} volume={0.45} />
+      <Sfx nome="rise" at={0.2} volume={0.35} />
+      <Sfx nome="unlock" at={0.75} volume={0.35} />
+      {atributos.map((a, i) => (
+        <Sfx key={a.k} nome="pop" at={1.3 + i * 0.22} volume={0.3} />
+      ))}
+      {selo && <Sfx nome="ding" at={seloAt} volume={0.45} />}
+
+      <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 45%, rgba(10,10,12,0.55), rgba(10,10,12,0.92))`, opacity: Math.min(1, t * 3) }} />
+      <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 42%, ${COLORS.accent}55, transparent 55%)`, opacity: entra }} />
+
+      <div
+        style={{
+          position: "absolute",
+          left: 540 - W / 2,
+          top: 230,
+          width: W,
+          height: 960,
+          transform: `perspective(1600px) rotateY(${(1 - entra) * 160}deg) scale(${0.6 + 0.4 * entra})`,
+          opacity: Math.min(1, entra * 2),
+          borderRadius: 48,
+          padding: 10,
+          background: `linear-gradient(160deg, ${ouro}, #B8862F 45%, ${ouro} 70%, #8C6420)`,
+          boxShadow: `0 40px 90px rgba(0,0,0,0.7), 0 0 80px ${ouro}66`,
+        }}
+      >
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            borderRadius: 40,
+            overflow: "hidden",
+            background: `linear-gradient(170deg, #12305E, #0B1A33 60%, #050B16)`,
+            fontFamily,
+          }}
+        >
+          <Img src={staticFile(foto)} style={{ position: "absolute", left: 40, top: 60, width: 560, height: 500, objectFit: "cover", objectPosition: "50% 20%", borderRadius: 28, border: `4px solid ${ouro}` }} />
+          <div style={{ position: "absolute", left: 30, top: 30, display: "flex", flexDirection: "column", alignItems: "center", background: "rgba(5,11,22,0.85)", borderRadius: 22, padding: "10px 18px", border: `3px solid ${ouro}` }}>
+            <div style={{ fontSize: 96, fontWeight: 900, color: ouro, lineHeight: 1 }}>{nota}</div>
+            <div style={{ fontSize: 30, fontWeight: 800, color: "#fff", letterSpacing: 2 }}>{posicao}</div>
+          </div>
+          <div style={{ position: "absolute", left: 0, right: 0, top: 580, textAlign: "center", fontSize: 64, fontWeight: 900, color: "#fff", letterSpacing: 1 }}>{nome}</div>
+          <div style={{ position: "absolute", left: 44, right: 30, top: 685, display: "grid", gridTemplateColumns: "1fr 1fr", rowGap: 14, columnGap: 30 }}>
+            {atributos.map((a, i) => {
+              const k = pop(frame, fps, 1.3 + i * 0.22, 12);
+              return (
+                <div key={a.k} style={{ display: "flex", alignItems: "baseline", gap: 14, opacity: k, transform: `translateY(${(1 - k) * 20}px)` }}>
+                  <span style={{ fontSize: 44, fontWeight: 900, color: ouro }}>{a.v}</span>
+                  <span style={{ fontSize: 26, fontWeight: 700, color: "#fff", whiteSpace: "nowrap" }}>{a.k}</span>
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ position: "absolute", top: 0, bottom: 0, left: `${brilho}%`, width: "30%", background: "linear-gradient(100deg, transparent, rgba(255,255,255,0.35), transparent)", transform: "skewX(-15deg)" }} />
+        </div>
+      </div>
+
+      {selo && carimbo > 0 && (
+        <div style={{ position: "absolute", left: 0, right: 0, top: 1250, display: "flex", justifyContent: "center" }}>
+          <div
+            style={{
+              padding: "14px 40px",
+              borderRadius: 18,
+              border: `7px solid ${COLORS.accent}`,
+              color: COLORS.accent,
+              background: "rgba(0,0,0,0.6)",
+              fontFamily,
+              fontWeight: 900,
+              fontSize: 84,
+              letterSpacing: 2,
+              transform: `rotate(-8deg) scale(${2.4 - 1.4 * carimbo})`,
+              opacity: Math.min(1, carimbo * 1.5),
+              boxShadow: `0 0 50px ${COLORS.accent}88`,
+            }}
+          >
+            {selo}
+          </div>
+        </div>
+      )}
+      <AbsoluteFill style={{ background: "#fff", opacity: flash }} />
+    </AbsoluteFill>
+  );
+};
+
 const COMPONENTES: { [K in Overlay["type"]]: React.FC<any> } = {
   contato: Contato,
+  carta: Carta,
   counter: Counter,
   title: Title,
   headline: Headline,
