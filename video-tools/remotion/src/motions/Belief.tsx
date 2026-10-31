@@ -59,7 +59,7 @@ export const Belief: React.FC<BeliefProps> = (p) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          ...texto(84, 900, COLORS.ink),
+          ...texto(84, 900, "#111111"), // cartão é branco: texto sempre escuro
           letterSpacing: 2,
         }}
       >
