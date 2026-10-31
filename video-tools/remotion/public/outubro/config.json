@@ -1,0 +1,182 @@
+{
+  "video": "outubro/video.mp4",
+  "captions": "outubro/captions.json",
+  "durationSec": 42.6,
+  "overlays": [
+    {
+      "type": "leak",
+      "start": 0,
+      "end": 1.1,
+      "seed": 1
+    },
+    {
+      "type": "headline",
+      "start": 0.1,
+      "end": 2.4,
+      "lines": [
+        {
+          "text": "SÁBADO",
+          "at": 0
+        },
+        {
+          "text": "31 DE OUTUBRO",
+          "at": 0.9,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "emoji",
+      "start": 7.3,
+      "end": 9.2,
+      "name": "party",
+      "pos": "right"
+    },
+    {
+      "type": "headline",
+      "start": 9.6,
+      "end": 13.4,
+      "lines": [
+        {
+          "text": "SEM VOCÊ",
+          "at": 0.4
+        },
+        {
+          "text": "CLIENTE",
+          "at": 0.8,
+          "box": true
+        }
+      ],
+      "pulseAt": 1.2
+    },
+    {
+      "type": "title",
+      "start": 14.2,
+      "end": 17.7,
+      "text": "OBRIGADO!"
+    },
+    {
+      "type": "hearts",
+      "start": 14.4,
+      "end": 15.8
+    },
+    {
+      "type": "leak",
+      "start": 22.9,
+      "end": 24.0,
+      "seed": 6
+    },
+    {
+      "type": "title",
+      "start": 24.1,
+      "end": 26.4,
+      "text": "GRATIDÃO"
+    },
+    {
+      "type": "hearts",
+      "start": 24.4,
+      "end": 25.8
+    },
+    {
+      "type": "headline",
+      "start": 26.5,
+      "end": 32.6,
+      "lines": [
+        {
+          "text": "VEM MAIS",
+          "at": 0.2
+        },
+        {
+          "text": "COISA BOA",
+          "at": 0.6
+        },
+        {
+          "text": "NOV E DEZ",
+          "at": 2.6,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "leak",
+      "start": 38.4,
+      "end": 39.5,
+      "seed": 4
+    },
+    {
+      "type": "headline",
+      "start": 38.7,
+      "end": 42.6,
+      "lines": [
+        {
+          "text": "NÃO PERCA TEMPO",
+          "at": 0.2
+        },
+        {
+          "text": "CHAMA NA ALBA",
+          "at": 2.75,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "emoji",
+      "start": 41.3,
+      "end": 42.6,
+      "name": "point-down",
+      "pos": "left-low"
+    }
+  ],
+  "scenes": [
+    {
+      "start": 2.35,
+      "end": 7.25,
+      "layout": "full",
+      "motion": "statement",
+      "icon": "target",
+      "iconAt": 2.45,
+      "lines": [
+        {
+          "text": "meta batida!",
+          "at": 2.6
+        },
+        {
+          "text": "resultado",
+          "at": 5.8
+        },
+        {
+          "text": "histórico",
+          "at": 6.1,
+          "accent": true
+        }
+      ]
+    },
+    {
+      "start": 18.0,
+      "end": 22.85,
+      "motion": "options",
+      "header": "obrigado a quem:",
+      "headerIcon": "heart",
+      "items": [
+        {
+          "icon": "check",
+          "title": "Trouxe o carro",
+          "sub": "pra gente cuidar",
+          "at": 19.27
+        },
+        {
+          "icon": "shield",
+          "title": "Cuidou do carro",
+          "sub": "com a Albalub",
+          "at": 20.83
+        },
+        {
+          "icon": "heart",
+          "title": "Confiou na gente",
+          "sub": "em outubro",
+          "at": 21.89
+        }
+      ]
+    }
+  ]
+}
