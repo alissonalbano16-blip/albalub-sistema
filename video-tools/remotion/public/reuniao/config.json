@@ -1,0 +1,171 @@
+{
+  "video": "reuniao/video.mp4",
+  "captions": "reuniao/captions.json",
+  "durationSec": 24.25,
+  "overlays": [
+    {
+      "type": "leak",
+      "start": 0,
+      "end": 1.1,
+      "seed": 1
+    },
+    {
+      "type": "counter",
+      "start": 0.05,
+      "end": 1.7,
+      "prefix": "",
+      "value": 188,
+      "suffix": "%",
+      "label": "DA META"
+    },
+    {
+      "type": "leak",
+      "start": 1.5,
+      "end": 2.6,
+      "seed": 4
+    },
+    {
+      "type": "headline",
+      "start": 1.8,
+      "end": 5.1,
+      "lines": [
+        {
+          "text": "REUNIÃO DE",
+          "at": 0.1
+        },
+        {
+          "text": "FECHAMENTO",
+          "at": 0.5,
+          "box": true
+        },
+        {
+          "text": "OUTUBRO",
+          "at": 1.0
+        }
+      ]
+    },
+    {
+      "type": "leak",
+      "start": 7.3,
+      "end": 8.4,
+      "seed": 6
+    },
+    {
+      "type": "headline",
+      "start": 7.6,
+      "end": 11.8,
+      "lines": [
+        {
+          "text": "QUEM FAZ",
+          "at": 0.1
+        },
+        {
+          "text": "ACONTECE",
+          "at": 0.5,
+          "box": true
+        }
+      ],
+      "pulseAt": 2.2
+    },
+    {
+      "type": "leak",
+      "start": 11.7,
+      "end": 12.8,
+      "seed": 2
+    },
+    {
+      "type": "headline",
+      "start": 11.95,
+      "end": 13.25,
+      "lines": [
+        {
+          "text": "OS",
+          "at": 0
+        },
+        {
+          "text": "RESULTADOS",
+          "at": 0.25,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "counter",
+      "start": 13.3,
+      "end": 15.0,
+      "prefix": "",
+      "value": 133,
+      "suffix": " mil",
+      "label": "NO MÊS"
+    },
+    {
+      "type": "counter",
+      "start": 16.95,
+      "end": 18.7,
+      "prefix": "",
+      "value": 114,
+      "suffix": "%",
+      "label": "DA META"
+    },
+    {
+      "type": "emoji",
+      "start": 17.2,
+      "end": 18.7,
+      "name": "fire",
+      "pos": "left-low"
+    },
+    {
+      "type": "headline",
+      "start": 18.75,
+      "end": 20.7,
+      "lines": [
+        {
+          "text": "E O",
+          "at": 0
+        },
+        {
+          "text": "GANHADOR...",
+          "at": 0.3,
+          "box": true
+        }
+      ]
+    },
+    {
+      "type": "counter",
+      "start": 20.8,
+      "end": 22.6,
+      "prefix": "",
+      "value": 100,
+      "suffix": "%",
+      "label": "META CUMPRIDA"
+    },
+    {
+      "type": "leak",
+      "start": 22.4,
+      "end": 23.5,
+      "seed": 5
+    },
+    {
+      "type": "headline",
+      "start": 22.4,
+      "end": 24.25,
+      "lines": [
+        {
+          "text": "OBRIGADO,",
+          "at": 0.1
+        },
+        {
+          "text": "TIME!",
+          "at": 0.45,
+          "box": true
+        },
+        {
+          "text": "ALBALUB",
+          "at": 0.9
+        }
+      ],
+      "pulseAt": 1.2
+    }
+  ],
+  "scenes": []
+}

@@ -1,0 +1,156 @@
+[
+ {
+  "text": " Vamos",
+  "startMs": 5200,
+  "endMs": 5600,
+  "timestampMs": 5400,
+  "confidence": 0.125
+ },
+ {
+  "text": " tentar",
+  "startMs": 5600,
+  "endMs": 6000,
+  "timestampMs": 5800,
+  "confidence": 0.939
+ },
+ {
+  "text": " ser",
+  "startMs": 6000,
+  "endMs": 6180,
+  "timestampMs": 6090,
+  "confidence": 0.944
+ },
+ {
+  "text": " o",
+  "startMs": 6180,
+  "endMs": 6320,
+  "timestampMs": 6250,
+  "confidence": 0.683
+ },
+ {
+  "text": " mais",
+  "startMs": 6320,
+  "endMs": 6420,
+  "timestampMs": 6370,
+  "confidence": 0.985
+ },
+ {
+  "text": " breve",
+  "startMs": 6420,
+  "endMs": 6600,
+  "timestampMs": 6510,
+  "confidence": 0.125
+ },
+ {
+  "text": " possível",
+  "startMs": 6600,
+  "endMs": 6880,
+  "timestampMs": 6740,
+  "confidence": 0.982
+ },
+ {
+  "text": " com",
+  "startMs": 6880,
+  "endMs": 7100,
+  "timestampMs": 6990,
+  "confidence": 0.881
+ },
+ {
+  "text": " vocês.",
+  "startMs": 7100,
+  "endMs": 7400,
+  "timestampMs": 7250,
+  "confidence": 0.996
+ },
+ {
+  "text": " ele",
+  "startMs": 7500,
+  "endMs": 7580,
+  "timestampMs": 7540,
+  "confidence": 0.145
+ },
+ {
+  "text": " teve",
+  "startMs": 7580,
+  "endMs": 7700,
+  "timestampMs": 7640,
+  "confidence": 0.068
+ },
+ {
+  "text": " a",
+  "startMs": 7700,
+  "endMs": 7800,
+  "timestampMs": 7750,
+  "confidence": 0.781
+ },
+ {
+  "text": " frente",
+  "startMs": 7800,
+  "endMs": 7940,
+  "timestampMs": 7870,
+  "confidence": 0.195
+ },
+ {
+  "text": " da",
+  "startMs": 7940,
+  "endMs": 8020,
+  "timestampMs": 7980,
+  "confidence": 0.964
+ },
+ {
+  "text": " operação,",
+  "startMs": 8020,
+  "endMs": 8900,
+  "timestampMs": 8460,
+  "confidence": 0.954
+ },
+ {
+  "text": " tomou",
+  "startMs": 9280,
+  "endMs": 9380,
+  "timestampMs": 9330,
+  "confidence": 0.965
+ },
+ {
+  "text": " a",
+  "startMs": 9380,
+  "endMs": 9540,
+  "timestampMs": 9460,
+  "confidence": 0.8
+ },
+ {
+  "text": " frente",
+  "startMs": 9540,
+  "endMs": 9660,
+  "timestampMs": 9600,
+  "confidence": 0.996
+ },
+ {
+  "text": " dos",
+  "startMs": 9660,
+  "endMs": 9780,
+  "timestampMs": 9720,
+  "confidence": 0.959
+ },
+ {
+  "text": " problemas,",
+  "startMs": 9780,
+  "endMs": 10340,
+  "timestampMs": 10060,
+  "confidence": 0.967
+ },
+ {
+  "text": " resolveu,",
+  "startMs": 10640,
+  "endMs": 11640,
+  "timestampMs": 11140,
+  "confidence": 0.966
+ },
+ {
+  "text": " enfim,",
+  "startMs": 11800,
+  "endMs": 11900,
+  "timestampMs": 11850,
+  "confidence": 0.904
+ }
+]
