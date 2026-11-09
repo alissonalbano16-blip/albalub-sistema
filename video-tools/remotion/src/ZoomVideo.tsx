@@ -22,10 +22,11 @@ const iniciosDeFrase = (captions: Caption[]) => {
   return inicios;
 };
 
-export const ZoomVideo: React.FC<{ src: string; captions: Caption[]; socos: number[] }> = ({
+export const ZoomVideo: React.FC<{ src: string; captions: Caption[]; socos: number[]; fixo?: boolean }> = ({
   src,
   captions,
   socos,
+  fixo,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -37,7 +38,7 @@ export const ZoomVideo: React.FC<{ src: string; captions: Caption[]; socos: numb
   // Alterna perto/longe a cada frase, com uma transição curta
   let k = 0;
   while (k + 1 < inicios.length && inicios[k + 1] <= t) k++;
-  const nivel = (i: number) => (i % 2 === 1 ? ZOOM_PERTO : 1);
+  const nivel = (i: number) => (i % 2 === 1 && !fixo ? ZOOM_PERTO : 1);
   const base = interpolate(t - inicios[k], [0, TRANSICAO_S], [nivel(k - 1 < 0 ? 0 : k - 1), nivel(k)], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",

@@ -34,6 +34,7 @@ export type Overlay = Base &
     | { type: "emoji"; name: string; pos?: EmojiPos; size?: number }
     | { type: "leak"; seed?: number; hue?: number }
     | { type: "contato"; whatsapp: string; pix?: string; nome?: string }
+    | { type: "faixa"; text: string; sub?: string; icon?: IconName; y?: number; destaque?: boolean }
     | { type: "regua"; de: string; para: string; desceAt: number; selo?: string; seloAt?: number }
     | { type: "placa"; label?: string; text: string; seta?: boolean }
     | { type: "carta"; foto: string; nome: string; posicao: string; nota: number; atributos: { k: string; v: number }[]; selo?: string; seloAt?: number }
@@ -1234,7 +1235,56 @@ const Regua: React.FC<Extract<Overlay, { type: "regua" }>> = ({ de, para, desceA
   );
 };
 
+/* ───────────── Faixa de informação (posição livre) ───────────── */
+
+// Cartão horizontal que entra deslizando, com ícone, título e subtítulo. `y` posiciona na tela
+// (útil quando o topo já tem um título fixo na arte). `destaque` = fundo na cor de destaque e pulso.
+const Faixa: React.FC<Extract<Overlay, { type: "faixa" }>> = ({ text, sub, icon, y = 540, destaque }) => {
+  const { frame, fps, t } = useT();
+  const saida = useSaida(6);
+  const k = pop(frame, fps, 0, 13);
+  const k2 = pop(frame, fps, 0.18, 13);
+  const pulso = destaque ? 1 + 0.035 * Math.sin(t * 7) : 1;
+  const fundo = destaque ? COLORS.accent : "linear-gradient(160deg, rgba(20,24,34,0.94), rgba(8,10,16,0.94))";
+  const corTexto = destaque ? COLORS.ink : "#fff";
+  return (
+    <AbsoluteFill style={{ opacity: saida }}>
+      <Sfx nome="whoosh" volume={0.3} />
+      <Sfx nome="pop" at={0.18} volume={0.3} />
+      <div
+        style={{
+          position: "absolute",
+          left: 60,
+          right: 60,
+          top: y,
+          display: "flex",
+          alignItems: "center",
+          gap: 26,
+          padding: "18px 30px",
+          borderRadius: 26,
+          background: fundo,
+          border: `3px solid ${COLORS.accent}`,
+          boxShadow: `0 18px 40px rgba(0,0,0,0.55), 0 0 40px ${COLORS.accent}55`,
+          transform: `translateX(${(1 - k) * -1100}px) scale(${pulso})`,
+          fontFamily,
+        }}
+      >
+        {icon && (
+          <div style={{ width: 92, height: 92, flexShrink: 0, borderRadius: 24, display: "flex", alignItems: "center", justifyContent: "center", background: destaque ? "rgba(0,0,0,0.85)" : `${COLORS.accent}22`, border: `2px solid ${COLORS.accent}` }}>
+            <Icon name={icon} size={54} color={COLORS.accent} stroke={2.4} />
+          </div>
+        )}
+        <div style={{ display: "flex", flexDirection: "column", gap: 4, minWidth: 0, opacity: k2, transform: `translateX(${(1 - k2) * -40}px)` }}>
+          <div style={{ fontSize: 50, fontWeight: 900, color: corTexto, lineHeight: 1.02, letterSpacing: -0.5, whiteSpace: "nowrap" }}>{text}</div>
+          {sub && <div style={{ fontSize: 30, fontWeight: 700, color: destaque ? "rgba(0,0,0,0.75)" : "rgba(255,255,255,0.75)", whiteSpace: "nowrap" }}>{sub}</div>}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const COMPONENTES: { [K in Overlay["type"]]: React.FC<any> } = {
+  faixa: Faixa,
   regua: Regua,
   placa: Placa,
   contato: Contato,

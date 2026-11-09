@@ -10,6 +10,7 @@ export type ReelsConfig = {
   video: string;
   captions: string;
   durationSec: number;
+  semZoom?: boolean; // vídeo montado sobre arte fixa: sem cortes/socos de zoom
   overlays: Overlay[];
   scenes?: Scene[];
 };
@@ -53,7 +54,7 @@ export const Reels: React.FC<ReelsProps> = ({ config, captions }) => {
     <SplitCtx.Provider value={split}>
       <AbsoluteFill style={{ backgroundColor: COLORS.bg }}>
         <SplitPanel scenes={scenes} />
-        <ZoomVideo src={config.video} captions={captions} socos={socos} />
+        <ZoomVideo src={config.video} captions={captions} socos={config.semZoom ? [] : socos} fixo={config.semZoom} />
         {/* Vinheta sutil + escurece topo e base para os textos */}
         <AbsoluteFill
           style={{
